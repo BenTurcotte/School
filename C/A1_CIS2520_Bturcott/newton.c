@@ -34,6 +34,8 @@ double recursiveNewton(double x, double e, double a) {
  */
 double nonrecursiveNewton(double x, double e, double a) {
 
+    double abs;
+
     do {
         abs = a*a-x;
         if(abs < 0) abs = -1 * abs;
@@ -76,14 +78,11 @@ void newton(double x, double e) {
 
     if(timeRec < timeNon) {
         double timeDiff = timeNon - timeRec;
-        printf("The recursive function was executed
-            %fms faster than the non-recursive function.\n", timeDiff);
+        printf("The recursive function was executed %fms faster than the non-recursive function.\n", timeDiff);
     }
     else if(timeNon < timeRec) {
         double timeDiff = timeRec - timeNon;
-        printf("The non-recursive function was executed
-            %fms faster than the recursive function\n", timeDiff);
+        printf("The non-recursive function was executed %fms faster than the recursive function\n", timeDiff);
     }
-    else printf("There was no difference in execution time
-            between the recursive and the non-recursive function.\n");
+    else printf("There was no difference in execution time between the recursive and the non-recursive function.\n");
 }

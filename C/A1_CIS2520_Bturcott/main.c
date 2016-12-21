@@ -35,8 +35,7 @@ int main(int argc, char** argv) {
     
     else if( !strcmp(argv[1], "newton") && argc == 4 )
         int ans = newton( strtod(argv[2], NULL), strtod(argv[3], NULL) );
-    else {
-        printf("Error: Incorrect input. Refer to readme.txt\n");
-    }
+    
+    else printf("Error: Incorrect input. Refer to readme.txt\n");
     return 0;
 }

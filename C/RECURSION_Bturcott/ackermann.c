@@ -1,7 +1,7 @@
 /**
- * Ben Turcotte - 0832217
- * Due: Monday, September 26th, 2016
- * Assignment 1 for CIS2520 F16
+ * @author  Ben Turcotte
+ * @date    2016-09-26
+ * @title   ackermann.c
  */
 
 #include <stdio.h>

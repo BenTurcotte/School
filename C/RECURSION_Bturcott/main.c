@@ -1,9 +1,6 @@
 /**
- * Assignment 1
- * Class: CIS2520 F16
- * Student ID: bturcott - 0832217
- * @author Ben Turcotte
- * @date 2016-09-26
+ * @author  Ben Turcotte
+ * @date    2016-09-26
  * @title   main.c
  */
 

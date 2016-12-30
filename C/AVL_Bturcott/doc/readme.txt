@@ -7,6 +7,17 @@ Bturcott - 0832217 - Assignment 4 for CIS2520 F16
 
 DESCRIPTION :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+This program implements the AVL tree data structure. It allows initialization
+  from a file, manually insertion (one-by-one), manual removal, height & size
+  updates, key search, & search all above a given frequancy.
+
+The program was originally written for my Data Structures (CIS*2520) A4.
+
+
+COMPILATION :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Navigate to home directory ("AVL_Bturcott").
+
 To compile
 - Type "make" (not case-sensitive) into cmd then press <enter>.
 
@@ -54,11 +65,12 @@ NOTES :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 SAMPLE OUTPUT :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Two different test runs are provided:
-    - one only uses the data file provided by our prof
-    - one uses that file in conjunction with user-inserted (menu option 3) keys
+  - one only uses the data file provided by our prof
+  - one uses that file in conjunction with user-inserted (menu option 3) keys
 
 
 -------------------------------------------------- JUST WITH PROVIDED DATA FILE
+
 Bens-MacBook-Pro-4:Bturcott_A4 Ben$ make
 gcc -Wall -std=c99 avltree.c -o runme
 Bens-MacBook-Pro-4:Bturcott_A4 Ben$ ./runme
@@ -180,7 +192,9 @@ height: 24, size: 1482
 avl/> 7
 Bens-MacBook-Pro-4:Bturcott_A4 Ben$
 
+
 ------------------------------------------------------------ TESTING EVERYTHING
+
 Bens-MacBook-Pro-4:Bturcott_A4 Ben$ make
 gcc -Wall -std=c99 avltree.c -o runme
 Bens-MacBook-Pro-4:Bturcott_A4 Ben$ ./runme

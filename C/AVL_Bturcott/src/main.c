@@ -14,18 +14,6 @@
  * main
  * prints banner, runs a menu loop until user enters "7" to exit.
  * The tree is destroyed (memory is freed) before the program exits
- *
- * @param   int     argc    number of command line arguments provided (starts from 0)
- * @param   char**  argv    array of character arrays (strings) that are each command line argument
- * @func    void    initialization(char* fileName, AVL* avl)
- * @func    void    find(char* findMe, Node* n)
- * @func    void    insertNode(char* key, AVL* avl)
- * @func    void    removeNode(char* key, AVL* avl)
- * @func    int     getNodeHeight(Node* n) {
- * @func    int     findAll(int i, Node* n)
- * @func    void    destroyTree(Node* n)
- * @return  int     0 on success
- * @return  int     1 if any error occurs (most common: malloc error)
  */
 int main(int argc, char** argv) {
     

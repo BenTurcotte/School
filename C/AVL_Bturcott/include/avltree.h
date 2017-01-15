@@ -11,7 +11,9 @@
 #ifndef __AVL_BTURCOTT__
 #define __AVL_BTURCOTT__
 
-// Struct declarations
+
+// Struct declarations ------------------------------------------------------//
+
 typedef struct Node {
     struct Node* left;
     struct Node* right;
@@ -23,6 +25,9 @@ typedef struct AVL {
     Node* root;
     int size;
 } AVL;
+
+
+// FUNCTION PROTOTYPES ------------------------------------------------------//
 
 /**
  * newNode

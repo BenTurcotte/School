@@ -1,0 +1,29 @@
+.b(name="home", link="index.php")
+.b(name="dashboard", link="index.php" 
+echo "<input type=\"hidden\" name=\"username\" value=\"$_POST[username]\" />";)
+.b(name="refresh", link="index.php" 
+echo "<input type=\"hidden\" name=\"username\" value=\"$_POST[username]\" />";
+echo "<input type=\"hidden\" name=\"streamname\" value=\"$_POST[streamname]\" />";
+echo "<input type=\"hidden\" name=\"order\" value=\"$_POST[order]\" />";
+echo "<input type=\"hidden\" name=\"messageNumber\" value=\"$_POST[messageNumber]\" />";)
+.b(name="Mark all as Read", link="index.php" <input type="hidden" name="markAll" value="read" />
+echo "<input type=\"hidden\" name=\"username\" value=\"$_POST[username]\" />";
+echo "<input type=\"hidden\" name=\"streamname\" value=\"$_POST[streamname]\" />";
+echo "<input type=\"hidden\" name=\"order\" value=\"$_POST[order]\" />";
+echo "<input type=\"hidden\" name=\"messageNumber\" value=\"$_POST[messageNumber]\" />";)
+.b(name="Mark all as Unread", link="index.php" <input type="hidden" name="markAll" value="unread" />
+echo "<input type=\"hidden\" name=\"username\" value=\"$_POST[username]\" />";
+echo "<input type=\"hidden\" name=\"streamname\" value=\"$_POST[streamname]\" />";
+echo "<input type=\"hidden\" name=\"order\" value=\"$_POST[order]\" />";
+echo "<input type=\"hidden\" name=\"messageNumber\" value=\"$_POST[messageNumber]\" />";)
+<br />
+.d()
+Change stream:
+.e(exe="view.py \"$_POST[username]\"")
+.d()
+echo '<br /><b>currently viewing: ' . $_POST[streamname] . '</b><br />';
+.t(text="echo '<br /><b>Stream: ' . $_POST[streamname] . '</b><br />';")
+<div id="viewerPostPanel">
+.t(text="~~~ TOP ~~~")
+.e(exe="view.py \"$_POST[username]\" \"$_POST[streamname]\" \"$_POST[order]\" \"$_POST[messageNumber]\"")
+.t(text="~~~ BOTTOM ~~~") </div>

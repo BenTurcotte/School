@@ -1,0 +1,30 @@
+CIS*3190
+Assignment 1: Hangman
+Ben Turcotte
+Bturcott - 0832217
+
+Reflection document
+
+My experience with re-engineering hang4.f
+I decided to re-engineer the hangman game because I don't know how to play dice and I do know how to play hangman.
+Right off the bat, I noticed the variable names. They defined ambiguity. I spent my first chuck of time trying to figure out what they all did, renaming them, then wait what... I've never seen this name before... hmm, let me check the variable definitions... oh wait, it's not here... what is it's type? what does it do?! Needless to say, implicit declarations is explicitly misconstruing. Anyway, I powered through it... Renamed all of the variables, changed the code so that no variables were implicitly declared. After changing all of the names, the next step was to figure out how to fix the rest of the code.
+My initial approach was to examine the source code and draw a map based on program flow. It was not far into my analysis that I came to the conclusion that the original program had about as much flow as Ice JJ Fish. This led me to my second, much more successful approach. I decided to test the old version of the game to get a better understanding of how it works. In doing so, I found that the game has two important loops--one inside of the other. The outer loop was used to pick a new word, (re)initialize all reused variables for the inner loop, keep track of meta information such as words have already been used, and prompt the user to play again or exit. The inner loop was used once a new word had been picked by the program. It prompted the user for letter and word guesses, printed the letters that have been guessed, printed the person being hung, and printed appropriate messages according to any other given input.
+After discovering the two loops, the next step was to see which parts of the old program were reusable. This involved grouping chucks of the old code together based on functionality, then rewriting them so they were much less convoluted. My update_message subroutine is one example of such grouping and rewriting. I used many lines from the old source code and kept them exactly the same (f.e. all of the write statements stayed the same). I then used a select statement to replace the plethora of GO TO statements.
+After completing the aforementioned steps, the re-engineering was nearly complete. I cleaned up a few bugs, then considered it done.
+
+It should be noted that I had an issue with generating random numbers. You will see when you look at my code, I tried to call rand() but the compiler was giving me a hard time. I tried to figure out what was going on but it was to no avail. My solution was to step through the list of words sequentially. I know that you may have a problem with that, but seeing as the compiler would not allow me to use the rand() function in the same manner that it was used in the original code, I had to come up with an alternative solution for picking the next word.
+Another issue I had that (I hate to admit) was that for the first 80% of my re-engineering writing process, my file had the ".f" extension on the end of it. Because of that, I was getting yelled at by the compiler about things that shouldn't matter because I was compiling with the -std=f95 flag. However, it did matter. I got to learn about how finicky old Fortran was. I later realized that I needed to change the file extension to ".f95". It was smooth sailing after that.
+
+Thoughts on Fortran in general:
+Why is it good?
+
+Fortran is a very fast language. In learning language, I wrote a few programs that did some fairly computation-heavy tasks. I wrote the same programs in C as well. Then I raced them. Fortran performed better than C on 2/3 of the trials.
+
+This program would have been easier to write in C. This is for two reasons.
+The first is that I already had extensive experience with C. I could have written the hangman program in under 30 minutes. Writing the program in Fortran took much longer because I had to spend time learning the language, then kept learning about the small idiosyncrasies as I worked on the program.
+The second reason is that there are quirky bits of Fortran that make it difficult to use for tasks that aren't centered around heavy computation. For example, something as simple as formatting a write(stuff,stuff) statement can be a headache if you had a specific formatting pattern in mind. It also takes an unreasonable amount of characters to declare simple data types and to specify their characteristics. Those are just a couple awkward bits of Fortran, but there are many. C also has its short comings, but for the most part, they seem to be less substantial than those of Fortran.
+
+I love math. For that reason, I was exited to learn Fortran. I knew that a couple of my calc profs use it for some (a lot) of their research. That was definitely a motivating factor in my learning process. However, I was disappointed with how little math was involved in the programs we were given to re-engineer. For the most part, Fortran is simple. The syntax is relatively clear (once you get rid of those ridiculous GO TOs). I like how close you're able to get to the raw data (similar to C in that regard). It allows for performance optimization that modern languages such as Python or Ruby tend to lack.
+
+How would I feel about re-engineering a 10,000 line Fortran program?
+Goodbye.

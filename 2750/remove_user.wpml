@@ -1,0 +1,6 @@
+.b(name="home", link="index.php")
+.h(size="2" text="Remove User")
+.d()
+.t(text="Please enter the name of the user you would like to remove and the name of the stream you would like to remove them from, then press submit.<br /><br />To remove a user from all streams that they belong to, list every stream they belong to separated by a comma.")
+.i(action="index.php", text="   Username: ", name="username", value="<username>", text="   Stream: ", name="streamname", value="<streamname>"  <input type="hidden" name="sendRemoveUser" value="yes" />)
+.d()

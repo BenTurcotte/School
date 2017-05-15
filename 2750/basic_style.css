@@ -1,0 +1,98 @@
+body {
+    font-family: Courier New;
+    background-color: lightgrey;
+    padding: 16px;
+}
+.welcome {
+    background-color: whitesmoke;
+    padding-inline-start: 10px;
+}
+
+h1 {
+    font-family: Courier New;
+    font-size: 110%;
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    font-family: Courier New;
+}
+
+p {
+    border: 1px solid DarkBlue;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    background-color: white;
+    font-family: Courier New;
+    font-size: 90%;
+}
+#postView {
+    border: 1px double black;
+}
+#centered {
+    text-align: center;
+    align-content: center;
+}
+
+#viewerPostPanel {
+    height: 400px;
+    overflow: auto;
+    background-color: darkred;
+    border: 2px solid darkgray;
+    align-content: center;
+}
+
+#postView {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+#error {
+    color: darkred;
+    border: 2px solid red;
+    text-align: center;
+    font-size: 100%;
+}
+
+#success {
+    color: darkgreen;
+    border: 2px solid green;
+    text-align: center;
+    font-size: 100%;
+}
+
+select {
+    font-family: Courier New;
+}
+option {
+    font-family: Courier New;
+    font-size: 110%;
+}
+
+button {
+    padding: 2px;
+    font-family: Courier New;
+    align-content: center;
+}
+
+input {
+    padding: 2px;
+    font-family: Courier New;
+}
+
+textarea {
+    font-family: Courier New;
+    resize: both;
+}
+#textarea_post {
+    word-wrap: soft;
+    border: 1px solid DarkBlue;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    background-color: white;
+    font-family: Courier New;
+    font-size: 90%;
+}

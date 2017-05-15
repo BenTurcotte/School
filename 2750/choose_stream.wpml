@@ -1,0 +1,18 @@
+.b(name="home", link="index.php")
+.b(name="Add" link="index.php" <input type="hidden" name="add" value="yes" />)
+.b(name="Post" link="index.php" <input type="hidden" name="post" value="yes" /> <input type="hidden" name="username" value="$_POST[username]" />)
+.h(size="2" text="Choose Stream")
+.d()
+.t(text="Please select a stream for viewing then click 'View'.<br />" You may also click 'Add User' to add yourself to a stream or to create a new stream.<br />)
+.e(exe="view.py \"$_POST[username]\"")<br />
+.d()
+.t(text="To make a new post, select a stream from the drop-down menu, then click 'New Post'.<br /><br />")
+.d()
+echo "<form action=\"index.php\" method=\"post\">";
+  .e(exe="view.py \"$_POST[username]\" \"GiveMeSelect\"")
+  echo "<input type=\"hidden\" name=\"username\" value=\"$_POST[username]\" />";
+  echo "<input type=\"hidden\" name=\"post\" value=\"yes\" />";
+  echo "<input type=\"submit\" value=\"New Post\" />";
+echo "</form>";
+.d()
+.d()

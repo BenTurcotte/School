@@ -1,0 +1,15 @@
+.b(name="home", link="index.php")
+<form action="index.php" method="post">
+  <input type="hidden" name="add" value="yes" />
+  <input type="submit" value="Add User" />
+</form>
+.b(name="home", link="index.php")
+.h(text="Post")
+.d()
+.e(exe="view.py $_POST[username]")
+<form action="index.php" method="post">
+<textarea name="postContent" rows="8"> enter text here. </textarea><br />
+echo "<input type=\"hidden\" name=\"username\" value=\"$_POST[username]\" />";
+echo "<input type=\"hidden\" name=\"streamname\" value=\"$_POST[streamname]\" />";
+<input type="submit" value="send post" />
+</form>
